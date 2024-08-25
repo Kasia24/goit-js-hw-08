@@ -1,7 +1,7 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  text-transform: none;
+  list-style-type: none;
   width: 1128px;
   height: 200px;
 }
