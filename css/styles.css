@@ -8,13 +8,11 @@
   margin-left: 156px;
   margin-top: 24px;
   margin-bottom: 24px;
+  gap: 24px;
 }
 
 .gallery img {
-  margin-right: 156px;
-  margin-left: 156px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  margin-right: 0px;
   cursor: pointer;
   transition: transform 0.3s;
   display: flex;
