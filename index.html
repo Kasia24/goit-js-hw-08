@@ -78,5 +78,25 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
         height="640px"
       />
     </div>
+    <script>
+      // Pobierz elementy
+      var modal = document.getElementById("myModal");
+      var modalImg = document.getElementById("img01");
+      var images = document.querySelectorAll(".gallery img");
+      var span = document.getElementsByClassName("close")[0];
+
+      // Dla każdego obrazu dodaj nasłuchiwacz kliknięcia
+      images.forEach((image) => {
+        image.onclick = function () {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        };
+      });
+
+      // Zamknij okno modalne po kliknięciu na "x"
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+    </script>
   </body>
 </html>
