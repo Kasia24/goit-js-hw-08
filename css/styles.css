@@ -1,10 +1,12 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  text-decoration: none;
 }
 
 .gallery img {
-  width: 150px;
+  width: 1128px;
+  height: 200px;
   margin: 5px;
   cursor: pointer;
   transition: transform 0.3s;
