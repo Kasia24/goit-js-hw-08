@@ -16,7 +16,6 @@
   transition: transform 0.3s;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
 }
 .gallery img:hover {
   transform: scale(1.05);
