@@ -1,0 +1,11 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 150px;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
