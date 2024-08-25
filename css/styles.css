@@ -12,7 +12,6 @@
 }
 
 .gallery-two {
-  margin-right: 0px;
   cursor: pointer;
   transition: transform 0.3s;
   display: flex;
