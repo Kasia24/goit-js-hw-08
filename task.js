@@ -24,3 +24,4 @@ function closeModal() {
 closeBtn.onclick = function () {
   closeModal();
 };
+openModal("example.jpg");
