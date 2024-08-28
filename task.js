@@ -13,3 +13,14 @@ images.forEach((image) => {
 span.onclick = function () {
   modal.style.display = "none";
 };
+function openModal(imgSrc) {
+  modal.style.display = "block";
+  modalImg.src = imgSrc;
+}
+function closeModal() {
+  modal.style.display = "none";
+  modalImg.src = "";
+}
+closeBtn.onclick = function () {
+  closeModal();
+};
