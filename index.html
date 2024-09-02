@@ -105,10 +105,14 @@ https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css
         modal.style.display = "none";
         modalImg.src = "";
       }
-      closeBtn.onclick = function () {
-        closeModal();
-      };
-      openModal("example.jpg");
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeModal();
+        }
+      });
+      function openModal() {
+        modal.style.display = "block";
+      }
     </script>
   </body>
 </html>
