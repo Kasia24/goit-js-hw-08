@@ -8,17 +8,17 @@
   gap: 24px;
   justify-content: center;
 }
-.gallery-item {
+.gallery-image {
   object-fit: cover;
   cursor: pointer;
   transition: transform 0.3s ease;
   width: 360px;
   height: 200px;
 }
-.gallery-item:hover {
+.gallery-image:hover {
   transform: scale(1.1);
 }
-.gallery img:hover {
+.gallery image:hover {
   transform: scale(1.05);
 }
 .modal {
