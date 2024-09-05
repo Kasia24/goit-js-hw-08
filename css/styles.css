@@ -15,6 +15,9 @@
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+.gallery-item:hover {
+  transform: scale(1.1);
+}
 
 .gallery-two {
   cursor: pointer;
