@@ -5,7 +5,6 @@
   width: 360px;
   height: 200px;
   margin-right: 156px;
-  margin-left: 156px;
   margin-top: 24px;
   margin-bottom: 24px;
   gap: 16px;
@@ -17,13 +16,6 @@
 }
 .gallery-item:hover {
   transform: scale(1.1);
-}
-
-.gallery-two {
-  cursor: pointer;
-  transition: transform 0.3s;
-  display: flex;
-  flex-wrap: wrap;
 }
 .gallery img:hover {
   transform: scale(1.05);
