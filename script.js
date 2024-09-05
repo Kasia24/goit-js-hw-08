@@ -95,6 +95,13 @@ galleryContainer.addEventListener("click", (event) => {
   if (target.nodeName !== "IMG") return;
 
   const largeImageURL = target.dataset.source;
+  const instance = basicLightbox.create(`
+    <img src="${largeImageURL}" width="1112" height="640">
+  `);
+
+  instance.show();
+});
+
   openModal(largeImageURL, target.alt);
 });
 
@@ -124,3 +131,4 @@ function openModal(src, description) {
   modal.appendChild(closeBtn);
   document.body.appendChild(modal);
 }
+
