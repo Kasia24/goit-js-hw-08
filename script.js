@@ -96,13 +96,10 @@ galleryContainer.addEventListener("click", (event) => {
 
   const largeImageURL = target.dataset.source;
   const instance = basicLightbox.create(`
-    <img src="${largeImageURL}" width="1112" height="640">
+    <img src="${largeImageURL}" width="800" height="600">
   `);
 
   instance.show();
-});
-
-  openModal(largeImageURL, target.alt);
 });
 
 // Funkcja do otwierania modalu
@@ -131,4 +128,3 @@ function openModal(src, description) {
   modal.appendChild(closeBtn);
   document.body.appendChild(modal);
 }
-
