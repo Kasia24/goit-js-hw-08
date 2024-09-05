@@ -128,3 +128,15 @@ function openModal(src, description) {
   modal.appendChild(closeBtn);
   document.body.appendChild(modal);
 }
+const instance = basicLightbox.create(`
+  <div class="modal">
+      <h1>To jest okno modalne</h1>
+      <p>Naciśnij Escape, aby je zamknąć.</p>
+  </div>
+`);
+function onKeyDown(event) {
+  if (event.key === "Escape") {
+    instance.close(); // Metoda zamykania okna modalnego
+    document.removeEventListener("keydown", onKeyDown); // Usuń nasłuchiwanie klawisza Escape po zamknięciu
+  }
+}
