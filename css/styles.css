@@ -17,6 +17,8 @@
   transition: transform 0.3s ease;
   width: 360px;
   height: 200px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .gallery-image:hover {
   transform: scale(1.1);
