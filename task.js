@@ -17,3 +17,4 @@ document.addEventListener("keydown", function (event) {
 function openModal() {
   modal.style.display = "block";
 }
+<script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>;
