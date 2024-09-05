@@ -19,3 +19,9 @@ function openModal() {
 }
 <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>;
 import * as basicLightbox from "basiclightbox";
+document.getElementById("openLightbox").addEventListener("click", () => {
+  const instance = basicLightbox.create(`
+      <img src="https://placekitten.com/800/600" alt="Cute kitten">
+  `);
+  instance.show();
+});
