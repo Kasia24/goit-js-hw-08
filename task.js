@@ -21,7 +21,7 @@ function openModal() {
 import * as basicLightbox from "basiclightbox";
 document.getElementById("openLightbox").addEventListener("click", () => {
   const instance = basicLightbox.create(`
-      <img src="https://placekitten.com/800/600" alt="Cute kitten">
+      <img src="./images/imgmodal.jpg">
   `);
   instance.show();
 });
