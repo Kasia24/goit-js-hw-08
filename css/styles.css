@@ -2,8 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
-  width: 360px;
-  height: 200px;
   margin-right: 156px;
   margin-top: 24px;
   margin-bottom: 24px;
@@ -14,6 +12,8 @@
   object-fit: cover;
   cursor: pointer;
   transition: transform 0.3s ease;
+  width: 360px;
+  height: 200px;
 }
 .gallery-item:hover {
   transform: scale(1.1);
