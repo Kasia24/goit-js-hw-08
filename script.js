@@ -140,3 +140,8 @@ function onKeyDown(event) {
     document.removeEventListener("keydown", onKeyDown); // Usuń nasłuchiwanie klawisza Escape po zamknięciu
   }
 }
+function openModal() {
+  instance.show(); // Otwieranie okna modalnego
+  document.addEventListener("keydown", onKeyDown); // Dodaj nasłuchiwanie na klawiaturę
+}
+document.querySelector("#openModalButton").addEventListener("click", openModal);
