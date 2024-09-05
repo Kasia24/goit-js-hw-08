@@ -1,27 +1,30 @@
-const modal = document.getElementById("myModal");
-const modalImg = document.getElementById("img01");
-const images = document.querySelectorAll(".gallery img");
-const span = document.getElementsByClassName("close")[0];
+document.addEventListener("DOMContentLoaded", () => {
+  const galleryItems = document.querySelectorAll(".gallery-item");
 
-span.onclick = function () {
-  closeModal();
-};
-function closeModal() {
-  modal.style.display = "none";
-}
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    closeModal();
+  galleryItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const src = item.src;
+      openModal(src);
+    });
+  });
+
+  function openModal(src) {
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.classList.add("modal-content");
+
+    const closeBtn = document.createElement("span");
+    closeBtn.classList.add("close");
+    closeBtn.textContent = "×";
+    closeBtn.addEventListener("click", () => {
+      modal.remove();
+    });
+
+    modal.appendChild(img);
+    modal.appendChild(closeBtn);
+    document.body.appendChild(modal);
   }
-});
-function openModal() {
-  modal.style.display = "block";
-}
-<script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>;
-import * as basicLightbox from "basiclightbox";
-document.getElementById("openLightbox").addEventListener("click", () => {
-  const instance = basicLightbox.create(`
-      <img src="./images/imgmodal.jpg">
-  `);
-  instance.show();
 });
