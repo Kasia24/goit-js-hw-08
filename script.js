@@ -147,3 +147,39 @@ function openModal1() {
 document
   .querySelector("#openModalButton")
   .addEventListener("click", openModal1);
+
+const modal1 = document.getElementById("modal1");
+const modal2 = document.getElementById("modal2");
+const openModal1Button = document.getElementById("openModal1");
+const openModal2Button = document.getElementById("openModal2");
+const closeModal1Button = document.getElementById("closeModal1");
+const closeModal2Button = document.getElementById("closeModal2");
+
+const openModal = (modal) => {
+  modal.classList.add("show");
+};
+
+// Funkcja do zamykania modala
+const closeModal = (modal) => {
+  modal.classList.remove("show");
+};
+
+// Otwieranie modali
+openModal1Button.addEventListener("click", () => openModal(modal1));
+openModal2Button.addEventListener("click", () => openModal(modal2));
+
+// Zamykanie modali przyciskiem
+closeModal1Button.addEventListener("click", () => closeModal(modal1));
+closeModal2Button.addEventListener("click", () => closeModal(modal2));
+
+// Globalny nasłuchiwacz klawisza Escape
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    if (modal1.classList.contains("show")) {
+      closeModal(modal1);
+    }
+    if (modal2.classList.contains("show")) {
+      closeModal(modal2);
+    }
+  }
+});
