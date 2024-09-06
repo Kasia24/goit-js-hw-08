@@ -2,21 +2,14 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 0;
-}
-.gallery-item {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
+  gap: 24px;
   margin-right: 156px;
   margin-left: 156px;
   margin-top: 24px;
   margin-bottom: 24px;
-  gap: 24px;
-  justify-content: center;
-  width: 360px;
-  height: 200px;
-  flex-basis: calc(33.333% - 10px);
+}
+.gallery-item {
+  flex-basis: calc(33.333% - 24px);
 }
 .gallery-image {
   object-fit: cover;
