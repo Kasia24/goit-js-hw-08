@@ -17,6 +17,7 @@
   justify-content: center;
   width: 360px;
   height: 200px;
+  flex-basis: calc(33.333% - 10px);
 }
 .gallery-image {
   object-fit: cover;
