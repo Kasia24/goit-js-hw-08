@@ -94,49 +94,21 @@ galleryContainer.addEventListener("click", (event) => {
 
   if (target.nodeName !== "IMG") return;
 
-  const largeImageURL = target.dataset.source;
-  const instance = basicLightbox.create(`
-    <img src="${largeImageURL}" width="800" height="600">
-  `);
+  const largeImageURL = event.target.dataset.source;
 
-  instance.show();
-});
-// Czekaj na załadowanie DOM
-document.addEventListener("DOMContentLoaded", () => {
-  const modal1 = document.getElementById("modal1");
-  const modal2 = document.getElementById("modal2");
-  const openModal1Button = document.getElementById("openModal1");
-  const openModal2Button = document.getElementById("openModal2");
-  const closeModal1Button = document.getElementById("closeModal1");
-  const closeModal2Button = document.getElementById("closeModal2");
-
-  // Funkcja do otwierania modala
-  const openModal = (modal) => {
-    modal.classList.add("show");
-  };
-
-  // Funkcja do zamykania modala
-  const closeModal = (modal) => {
-    modal.classList.remove("show");
-  };
-
-  // Otwieranie modali
-  openModal1Button.addEventListener("click", () => openModal(modal1));
-  openModal2Button.addEventListener("click", () => openModal(modal2));
-
-  // Zamykanie modali przyciskiem
-  closeModal1Button.addEventListener("click", () => closeModal(modal1));
-  closeModal2Button.addEventListener("click", () => closeModal(modal2));
-
-  // Globalny nasłuchiwacz klawisza Escape
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      if (modal1.classList.contains("show")) {
-        closeModal(modal1);
-      }
-      if (modal2.classList.contains("show")) {
-        closeModal(modal2);
-      }
+      openModal(largeImageURL);
     }
-  });
-});
+
+    function openModal(imageURL) {
+      const instance = basicLightbox.create(`
+        <img src="${imageURL}" width="800" height="600">
+      `);
+
+      instance.show();
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          instance.close();
+        }
+      });
+    }
